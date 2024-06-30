@@ -26,16 +26,15 @@ def send_email():
         email = request.form.get('email')
         message = request.form.get('message')
 
-        # Create message object
         msg = Message(subject=f" קיבלת הודעה חדשה מ:  {name}",
                       sender=('portfolio', 'eyalwork0@gmail.com'),
                       recipients=["eyalwork0@gmail.com"])
-        msg.body = message,{email}
+        msg.body = f"Message from: {email}\n\n{message}"
 
-        # Send email
         mail.send(msg)
         return "Email sent successfully! thank you"
-    except:
+    except Exception as e:
+        app.logger.error(f"Error sending email: {e}")
         return "Error, please try again"
 
 

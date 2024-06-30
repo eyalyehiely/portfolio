@@ -25,7 +25,7 @@ def send_email():
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
-        
+
     #create email message
         msg = Message(subject=f" קיבלת הודעה חדשה מ:  {name}",
                       sender=('portfolio', 'eyalwork0@gmail.com'),

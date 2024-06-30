@@ -1,16 +1,19 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "description": "A Flask web application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gunicorn app:app --bind 0.0.0.0:$PORT",
     "build-css": "sass src/scss/style.scss static/css/style.css",
     "watch-css": "sass --watch src/scss/style.scss:static/css/style.css"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "sass": "^1.77.6"
-  }
+    "sass": "^1.77.6",
+    "gunicorn": "^20.2.2"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {},
+  "keywords": []
 }

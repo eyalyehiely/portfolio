@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "gunicorn app:app --bind 0.0.0.0:$PORT",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "sass src/scss/style.scss static/css/style.css",
     "watch-css": "sass --watch src/scss/style.scss:static/css/style.css"

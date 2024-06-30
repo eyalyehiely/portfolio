@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "description": "A portfolio website for showcasing projects.",
   "main": "index.js",
   "scripts": {
     "start": "gunicorn app:app --bind 0.0.0.0:$PORT",
@@ -8,10 +9,12 @@
     "build-css": "sass src/scss/style.scss static/css/style.css",
     "watch-css": "sass --watch src/scss/style.scss:static/css/style.css"
   },
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "sass": "^1.77.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

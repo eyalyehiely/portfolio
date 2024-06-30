@@ -15,7 +15,7 @@ mail = Mail(app)
 
 @app.route('/')
 def home():
-    return render_template('/index.html')
+    return render_template('index.html')
 
 
 
@@ -25,12 +25,14 @@ def send_email():
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
-
+        
+    #create email message
         msg = Message(subject=f" קיבלת הודעה חדשה מ:  {name}",
                       sender=('portfolio', 'eyalwork0@gmail.com'),
                       recipients=["eyalwork0@gmail.com"])
         msg.body = f"Message from: {email}\n\n{message}"
 
+        # send email
         mail.send(msg)
         return "Email sent successfully! thank you"
     except Exception as e:

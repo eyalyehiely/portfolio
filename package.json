@@ -12,10 +12,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "sass": "^1.77.6",
-    "gunicorn": "^20.2.2"
-  },
-  "engines": {
-    "node": "18.x"
+    "sass": "^1.77.6"
   }
 }

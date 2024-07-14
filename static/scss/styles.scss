@@ -301,7 +301,7 @@ img{
         margin-bottom: .5rem; // Space between the bar and the percentage text
         position: relative; // Ensure it's relative to the container
         overflow: hidden; // Ensure the progress does not overflow
-    }
+    //
     &__python {
         background-color: #4c7dff; // Color for Python
     }
@@ -333,7 +333,7 @@ img{
 
     &__git {
         background-color: #1D4ED8; // Color for postgres
-    }
+    }//
 
     &__percentage {
         font-size: 1rem;

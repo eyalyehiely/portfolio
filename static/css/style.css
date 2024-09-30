@@ -484,3 +484,82 @@ img {
     width: 450px;
   }
 }
+
+
+
+/* General Styling */
+.projects {
+  padding: 2rem 0;
+}
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+  gap: 20px; /* Space between grid items */
+  width: 100%; /* Make sure the grid takes the full width of the container */
+}
+
+.project__item {
+  text-align: center;
+  background-color: #f8f9fa; /* Light background for contrast */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.projects__img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+  max-width: 150px; /* Maximum width for smaller screens */
+  object-fit: cover; /* Ensures the image fits without distortion */
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.projects__img:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+.project__title {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.project__description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+  .projects__grid {
+    grid-template-columns: 1fr; /* Change to 1 column on mobile devices */
+  }
+
+  .projects__img {
+    max-width: 100%; /* Allow the image to take up full width on smaller screens */
+  }
+}
+
+/* Tablet Devices (up to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr); /* Ensure 2 columns on tablets */
+  }
+}
+
+/* Larger Screens */
+@media (min-width: 1025px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns on larger screens */
+  }
+}

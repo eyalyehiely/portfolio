@@ -563,3 +563,47 @@ img {
     grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns on larger screens */
   }
 }
+
+
+.contact__container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure responsiveness */
+  justify-content: space-between;
+  gap: 20px; /* Space between form and Calendly link */
+}
+
+.contact__form-container {
+  flex: 1; /* Adjust form width */
+  min-width: 300px; /* Minimum width for responsiveness */
+}
+
+.calendly__container {
+  flex: 1; /* Adjust Calendly link width */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f9f9f9;
+  min-width: 300px; /* Minimum width for responsiveness */
+}
+
+.calendly__link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.calendly__link:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact__container {
+      flex-direction: column; /* Stack form and Calendly link vertically on smaller screens */
+  }
+}

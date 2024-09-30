@@ -382,29 +382,42 @@
         <h2 class="section-title">Contact</h2>
 
         <div class="contact__container bd-grid">
-          <form action="/send_email" method="POST" class="contact__form">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              class="contact__input"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              class="contact__input"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              class="contact__input"
-              required
-            ></textarea>
-            <button type="submit" class="button">Send</button>
-          </form>
+          <div class="contact__form-container">
+            <form action="/send_email" method="POST" class="contact__form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                class="contact__input"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                class="contact__input"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                class="contact__input"
+                required
+              ></textarea>
+              <button type="submit" class="button">Send</button>
+            </form>
+          </div>
+
+          <!-- Calendly embed link container -->
+          <div class="calendly__container">
+            <h3>Schedule a Meeting</h3>
+            <a
+              href="https://calendly.com/eyalwork0/30min"
+              target="_blank"
+              class="calendly__link"
+              >Book a Time with Me!</a
+            >
+          </div>
         </div>
       </section>
     </main>
